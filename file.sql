@@ -1,0 +1,17 @@
+CREATE DATABASE IF NOT EXISTS file;
+CREATE TABLE IF NOT EXISTS user(
+	user int(10) AUTO_INCREMENT  NOT NULL PRIMARY KEY,
+	username varchar(20) NOT NULL UNIQUE,
+	password varchar(20) NOT NULL
+)DEFAULT charset=utf8;
+
+CREATE TABLE IF NOT EXISTS friends(
+	id int(10) AUTO_INCREMENT  NOT NULL PRIMARY KEY,
+	userid varchar(20) NOT NULL UNIQUE,
+	follower varchar(20) NOT NULL
+)DEFAULT charset=utf8;
+CREATE TABLE IF NOT EXISTS friends(
+	id int(10) AUTO_INCREMENT  NOT NULL PRIMARY KEY,
+	userid varchar(20) NOT NULL UNIQUE,
+	file varchar(20) NOT NULL
+)DEFAULT charset=utf8;
